@@ -9,6 +9,7 @@ def render_main():
 
 @app.route("/response")
 def render_response():
+    json = requests.get('video_games.json')
     one = request.args['one']
     two = request.args['two']
     three = request.args['three']
@@ -16,4 +17,3 @@ def render_response():
     yes = request.args['yes']
     no = request.args['no']
     nopref = request.args['nopref']
-    
