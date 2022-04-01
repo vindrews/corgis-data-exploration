@@ -17,3 +17,4 @@ def render_response():
     yes = request.args['yes']
     no = request.args['no']
     nopref = request.args['nopref']
+    

@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+    <head> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Video Game Data Exploration</title>
+        <link rel="stylesheet" href="/static/mystyle.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="myscript.js"></script>
+
+        <!--bootstrap stuff-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>    
+        <script>
+            window.onload = function () {
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+                title:{
+                    text: "Handheld Ratings vs PC/Console Ratings"
+                },	
+                axisY: {
+                    title: "Average Rating",
+                    titleFontColor: "#4F81BC",
+                    lineColor: "#4F81BC",
+                    labelFontColor: "#4F81BC",
+                    tickColor: "#4F81BC"
+                },
+                toolTip: {
+                    shared: true
+                },
+                legend: {
+                    cursor:"pointer",
+                    itemclick: toggleDataSeries
+                },
+                data: [{
+                    type: "column",
+                    name: "Handheld",
+                    legendText: "Handheld",
+                    showInLegend: true, 
+                    dataPoints:[
+                        { label: "2004", y: 80 },
+                        { label: "2005", y: 69 },
+                        { label: "2006", y: 91 },
+                        { label: "2007", y: 77 },
+                        { label: "2008", y: 60 }
+                    ]
+                },
+                {
+                    type: "column",	
+                    name: "PC/Console",
+                    legendText: "PC/Console",
+                    showInLegend: true,
+                    dataPoints:[
+                        { label: "2004", y: 87 },
+                        { label: "2005", y: 95 },
+                        { label: "2006", y: 97 },
+                        { label: "2007", y: 83 },
+                        { label: "2008", y: 78 }
+                    ]
+                }]
+            });
+            chart.render();
+
+            function toggleDataSeries(e) {
+                if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                    e.dataSeries.visible = false;
+                }
+                else {
+                    e.dataSeries.visible = true;
+                }
+                chart.render();
+            }
+
+            }
+        </script>
+    </head>
+<body>
+
+    <nav class="navbar navbar-expand-md bg-primary navbar-dark">
+              <a class="navbar-brand" href="home.html">Video Games</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse bg-primary navbar-dark" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="home.html">Data Explanation</a>
+                  </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="page1.html">Video Game Reccomendation</a>
+                      </li> 
+                  <li class="nav-item">
+                    <a class="nav-link" href="page1.html">Developer Comparison</a>
+                  </li>
+                </ul>
+             </div>  
+    </nav>
+    
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
