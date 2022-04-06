@@ -1,7 +1,7 @@
-{%extends template.html%}
+{%extends "template.html"%}
  {%block content%}
       <h1>About the Data</h1>
-        <div id=”playstyles”>
+        <div id="playstyles">
             <p>
                 This dataset includes 4 categories for play styles, and within those 4 categories are 4 types of playtimes. The four categories are “All Play Styles” (A recording of the length of the game without taking playstyles into account), “Main + Extras” (A recording of the length of the main quest of the game, but also any major side quests and other exploration done to give the player the sense of actually <i>completing</i> the game), “Completionists” (A recording of the length of the game when the player actually does every single quest and explores everything they possibly can), and “Main Story” (A recording of the length of just the main quest of the game). Within these categories, there are four types of playtimes. First is “Average,” which is (hence the name) the average of all the playtimes within the overall category. Then, there’s “Leisure,” which is the slowest time reported for completing the game within the category of playstyles. Then, “Median,” which is the median of time taken to complete the game within that playstyle. Then, “Polled” which is not a measure of play time but is instead just the number of people that reported completing the game within the given playstyle. Lastly, there’s “Rushed” which is the fastest time reported for completing the game within the given playstyle. <br><br>
                 If no one could be found to report how long it took them to play a certain game, the playstyle categories were all recorded as “0.”

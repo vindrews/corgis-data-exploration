@@ -1,24 +1,25 @@
-{%extends template.html%}
+{%extends "template.html"%}
  {%block content%}
-  <h1>What Video Game Suits You?</h1>
+  <h1 id="reccomendheader">What Video Game Suits You?</h1>
     <div id="reccomend">
         <h2>Fill out this form to get a video game that matches your choices with the highest rating!</h2>
         
           <form action="/response">
-            <p>How many players?</p>
-              <input type="radio" id="playercount1" name="playercount" value="one">
-              <label for="playercount1">1</label><br>
-              <input type="radio" id="playercount2" name="playercount" value="two">
+            <p><b>How many players?</b></p>
+              <input type="radio" id="playercount1" name="playercount" value="1">
+              <label for="playercount1">1  </label>
+              <input type="radio" id="playercount2" name="playercount" value="2">
               <label for="playercount2">2</label><br>
-              <input type="radio" id="playercount3" name="playercount" value="three">
-              <label for="playercount3">3</label><br>
-              <input type="radio" id="playercount4" name="playercount" value="four">
+              <input type="radio" id="playercount3" name="playercount" value="3">
+              <label for="playercount3">3  </label>
+              <input type="radio" id="playercount4" name="playercount" value="4">
               <label for="playercount4">4</label><br><br>
-            <p>Do you want a handheld game?</p>
+              <p><b>Do you want a handheld game?</b></p>
               <input type="radio" id="handheldyes" name="handheld" value="true">
-              <label for="handheldyes">Yes</label><br>
+              <label for="handheldyes">Yes</label>
               <input type="radio" id="handheldno" name="handheld" value="false">
-              <label for="handheldno">No</label><br>
+              <label for="handheldno">No</label><br><br>
+              <input id="button" class = "btn btn primary" type="submit" value="Submit">
             </form> 
             
     </div>
