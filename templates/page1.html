@@ -4,7 +4,7 @@
     <div id="reccomend">
         <h2>Fill out this form to get a video game that matches your choices with the highest rating!</h2>
         
-          <form action="/response">
+          <form action="/page1">
             <p><b>How many players?</b></p>
               <input type="radio" id="playercount1" name="playercount" value="1">
               <label for="playercount1">1  </label>
@@ -23,5 +23,8 @@
             </form> 
             
     </div>
-{%endblock%}
+    <div id="response">
+        {{output}}
+    </div>
+  {%endblock%}
   

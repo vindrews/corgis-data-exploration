@@ -29,3 +29,8 @@ h1{
     margin-bottom: 10px;
     padding: 5px;
 }
+
+#response{
+    width: 50%;
+    margin: auto;
+}
