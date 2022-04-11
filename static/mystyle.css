@@ -33,4 +33,6 @@ h1{
 #response{
     width: 50%;
     margin: auto;
+    text-align: center;
+    font-size: 25px;
 }
